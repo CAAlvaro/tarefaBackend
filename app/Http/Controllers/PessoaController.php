@@ -30,7 +30,8 @@ class PessoaController extends Controller
         $Pessoa->nome = $request->nome;
         $Pessoa->telefone = $request->telefone;
         $Pessoa->endereco = $request->endereco;
-        $Pessoa->email = $request->email;
+		$Pessoa->email = $request->email;
+		$Pessoa->is_cliente_plus = $request->is_cliente_plus;
 		$Pessoa->save();
 
 		return response()->success($Pessoa);
@@ -53,6 +54,8 @@ class PessoaController extends Controller
                 $Pessoa->endereco = $request->endereco;
             if($request->email) 
 				$Pessoa->email = $request->email;
+			if($request->is_cliente_plus) 
+				$Pessoa->is_cliente_plus = $request->is_cliente_plus;
 		
 			$Pessoa->save();
 			return response()->success($Pessoa);
