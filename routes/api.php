@@ -32,6 +32,7 @@ Route::put('atualizaPessoa/{id}', 'PessoaController@updatePessoa');
 Route::delete('deletaPessoa/{id}', 'PessoaController@deletePessoa');
 
 //rotas para a relação
-Route::get('mostraDono/{animal_id}', 'OneToManyController@showPessoa');
-Route::get('mostraAnimais/{pessoa_id}', 'OneToManyController@showAnimals');
+Route::get('mostraDonoPorAnimal/{animal_id}', 'OneToManyController@showPessoa');
+Route::get('mostraAnimaisPorDono/{pessoa_id}', 'OneToManyController@showAnimals');
 Route::put('insereDono/{animal_id}', 'OneToManyController@insertPessoa');
+Route::put('removeDono/{animal_id}', 'OneToManyController@removePessoa');
