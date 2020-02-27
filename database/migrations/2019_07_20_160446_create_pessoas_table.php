@@ -13,7 +13,7 @@ class CreatePessoasTable extends Migration
      */
     public function up()
     {
-        
+
         Schema::create('pessoas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('cpf')->unique()->nullable();
@@ -24,7 +24,6 @@ class CreatePessoasTable extends Migration
             $table->boolean('is_cliente_plus');
             $table->timestamps();
         });
-
     }
 
     /**

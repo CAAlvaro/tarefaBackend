@@ -25,7 +25,7 @@ class CreateAnimalsTable extends Migration
         });
 
         Schema::table('animals', function (Blueprint $table) {
-            $table->foreign('pessoa_id')->references('id')->on('pessoas')->onDelete('set null'); 
+            $table->foreign('pessoa_id')->references('id')->on('pessoas')->onDelete('set null');
         });
     }
 
